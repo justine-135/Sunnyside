@@ -1,0 +1,607 @@
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+header {
+	background-image: url("./images/desktop/image-header.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	min-height: 500px;
+	width: 100%;
+	position: relative;
+}
+
+.navbar {
+	height: 80px;
+	display: flex;
+	align-items: center;
+}
+
+.navbar ul {
+	list-style-type: none;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	font-size: 1.8rem;
+	margin: auto;
+	width: 80%;
+	justify-content: space-between;
+}
+
+.navbar ul li {
+	margin-left: 30px;
+	font-family: "Barlow", serif;
+	color: white;
+	cursor: pointer;
+	font-weight: 400;
+}
+
+.contact {
+	padding: 1rem 2rem;
+	background-color: white;
+	border-radius: 30px;
+	font-weight: 600;
+	color: hsl(212, 27%, 19%);
+	margin-left: 30px;
+	text-transform: uppercase;
+	font-family: "Fraunces", serif;
+	transition: 200ms ease;
+	cursor: pointer;
+}
+.contact:hover {
+	background-color: rgba(253, 253, 253, 0.384);
+	color: white;
+}
+
+.logo {
+	margin-right: auto;
+}
+
+.large-welcome {
+	position: absolute;
+	left: 50%;
+	top: 30%;
+	transform: translate(-50%, -50%);
+	font-size: 6rem;
+	font-family: "Fraunces", serif;
+	text-transform: uppercase;
+	color: white;
+	width: auto;
+	text-align: center;
+}
+
+.arrow-down {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	animation: arrow 1.2s ease-in infinite;
+}
+
+@keyframes arrow {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+	50% {
+		transform: translate(-50%, -30%);
+	}
+	100% {
+		transform: translate(-50%, -50%);
+	}
+}
+
+.grid-container {
+	height: 1400px;
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas:
+		"text1 image1"
+		"image2 text2"
+		"image3 image4";
+}
+
+.text-container,
+.text-container2 {
+	margin: auto auto;
+	font-size: 1.8rem;
+	width: 420px;
+	line-height: 3rem;
+	font-family: "Barlow", serif;
+}
+
+.text-container p,
+.text-container2 p {
+	color: hsl(232, 10%, 55%);
+	padding: 2rem 0rem;
+	font-weight: 600;
+}
+
+.text-container h6,
+.text-container2 h6 {
+	font-family: "Fraunces", serif;
+
+	color: hsl(212, 27%, 19%);
+	font-size: 4rem;
+	line-height: 4rem;
+
+	font-size: 700;
+}
+
+.text-container a,
+.text-container2 a {
+	font-family: "Fraunces", serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: hsl(212, 27%, 19%);
+	font-weight: 700;
+	background-image: linear-gradient(
+		to right,
+		hsl(51, 100%, 49%),
+		hsl(51, 100%, 49%)
+	);
+	background-repeat: no-repeat;
+	background-size: 0% 7px;
+	background-position: bottom;
+	border-radius: 4px;
+	transition: 200ms ease;
+}
+.text-container2 a {
+	background-image: linear-gradient(
+		to right,
+		hsl(7, 99%, 70%),
+		hsl(7, 99%, 70%)
+	);
+}
+
+.text-container a:hover {
+	background-size: 115% 7px;
+}
+.text-container2 a:hover {
+	background-size: 115% 7px;
+}
+
+.text-container {
+	grid-template: text1;
+}
+
+.text-container2 {
+	grid-template: text2;
+}
+
+.img-container {
+	grid-template: image1;
+	background-image: url("./images/desktop/image-transform.jpg");
+	background-size: cover;
+}
+
+.img-container2 {
+	grid-template: image2;
+	background-color: rgb(247, 196, 58);
+	background-image: url("./images/desktop/image-stand-out.jpg");
+	background-size: cover;
+}
+
+.left-img-container {
+	grid-template: image3;
+	background-image: url("./images/desktop/image-graphic-design.jpg");
+	background-size: cover;
+	height: auto;
+	position: relative;
+}
+
+.left-img-inside,
+.right-img-inside {
+	position: absolute;
+	left: 50%;
+	bottom: -10%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 1.8rem;
+	color: hsl(212, 27%, 19%);
+	font-family: "Barlow", serif;
+}
+
+.left-img-inside {
+	color: hsl(167, 40%, 24%);
+}
+
+.right-img-inside {
+	bottom: -4%;
+}
+
+.left-img-inside h6 {
+	font-size: 3rem;
+	padding: 1rem 0rem;
+	font-family: "Fraunces", serif;
+
+	color: hsl(167, 40%, 24%);
+}
+
+.right-img-inside h6 {
+	font-size: 3rem;
+	padding: 1rem 0rem;
+	font-family: "Fraunces", serif;
+
+	color: hsl(212, 27%, 19%);
+}
+
+.right-img-container {
+	grid-template: image4;
+	background-image: url("./images/desktop/image-photography.jpg");
+	background-size: cover;
+	position: relative;
+}
+
+.clients-container {
+	height: 100vh;
+	min-height: 800px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.client-welcome {
+	color: hsl(210, 4%, 67%);
+	font-family: "Fraunces", serif;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	font-size: 2rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.emily .profile {
+	background-image: url("./images/image-emily.jpg");
+	height: 120px;
+	width: 120px;
+	background-size: cover;
+	border-radius: 50%;
+	margin-bottom: auto;
+}
+
+.thomas .profile {
+	background-image: url("./images/image-thomas.jpg");
+	height: 120px;
+	width: 120px;
+	background-size: cover;
+	border-radius: 50%;
+	margin-bottom: auto;
+}
+
+.jennie .profile {
+	background-image: url("./images/image-jennie.jpg");
+	height: 120px;
+	width: 120px;
+	background-size: cover;
+	border-radius: 50%;
+	margin-bottom: auto;
+}
+
+.emily h6,
+.thomas h6,
+.jennie h6 {
+	margin-top: auto;
+	font-size: 2rem;
+	font-weight: 700;
+	font-family: "Fraunces", serif;
+	color: hsl(212, 27%, 19%);
+}
+
+.emily span,
+.thomas span,
+.jennie span {
+	font-size: 1.6rem;
+	color: hsl(210, 4%, 67%);
+	font-family: "Barlow", serif;
+}
+
+.emily p,
+.thomas p,
+.jennie p {
+	width: 80%;
+	color: hsl(198, 62%, 26%);
+	font-weight: 600;
+	font-family: "Barlow", serif;
+
+	font-size: 1.6rem;
+}
+
+.cards-div {
+	display: flex;
+	align-items: center;
+	width: 90%;
+	height: 400px;
+}
+
+.cards-div > div {
+	font-size: 1.8rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem 1rem;
+	height: 100%;
+	line-height: 3rem;
+}
+
+.images-container {
+	display: flex;
+	height: 60vh;
+	width: 100%;
+	background-color: aqua;
+	min-height: 200px;
+	align-items: center;
+}
+
+.images-container > div {
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+}
+
+.img1 {
+	background-image: url("./images/desktop/image-gallery-milkbottles.jpg");
+}
+
+.img2 {
+	background-image: url("./images/desktop/image-gallery-orange.jpg");
+}
+.img3 {
+	background-image: url("./images/desktop/image-gallery-cone.jpg");
+}
+.img4 {
+	background-image: url("./images/desktop/image-gallery-sugarcubes.jpg");
+}
+footer {
+	height: 40vh;
+	min-height: 200px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: hsl(168, 80%, 70%);
+}
+
+footer ul {
+	list-style: none;
+}
+
+.logo-footer {
+	height: 100%;
+	width: 100%;
+}
+
+.logo-footer path {
+	fill: hsl(167, 40%, 24%);
+}
+
+.footer-links {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 300px;
+	font-size: 1.6rem;
+	padding: 2rem 0rem;
+	color: hsl(167, 40%, 24%);
+	font-family: "Barlow", serif;
+}
+
+.footer-links li {
+	cursor: pointer;
+	transition: 100ms ease;
+}
+
+.footer-links li:hover {
+	color: white;
+}
+
+.social-icons {
+	padding-top: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 200px;
+	cursor: pointer;
+}
+
+.social-icons svg {
+	cursor: pointer;
+}
+
+.social-icons svg:hover path {
+	fill: white;
+}
+
+.hamburger {
+	display: none;
+}
+.hide-menu {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.hide-menu {
+		display: none;
+	}
+	.menu {
+		display: block;
+	}
+	.menu {
+		position: relative;
+		margin: auto;
+		height: 200px;
+		width: 90%;
+		background-color: lightcoral;
+		z-index: 2;
+		background-color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.menu ul {
+		list-style-type: none;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.contact2 {
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		background-color: hsl(51, 100%, 49%);
+		color: hsl(212, 27%, 19%);
+		border: none;
+		padding: 1rem 2rem;
+		border-radius: 30px;
+		font-family: "Fraunces", serif;
+	}
+
+	.menu ul li {
+		font-size: 1.6rem;
+		margin-bottom: 20px;
+		font-family: "Barlow", serif;
+		color: hsl(232, 10%, 55%);
+	}
+
+	.large-welcome {
+		font-size: 3.8rem;
+	}
+	.grid-container {
+		max-width: 100%;
+		height: auto;
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(6, 400px);
+		grid-template-areas:
+			"text1"
+			"image1"
+			"image2"
+			"text2"
+			"image3"
+			"image4";
+	}
+	.text-container,
+	.text-container2,
+	.im {
+		width: 90%;
+		text-align: center;
+		font-size: 1.4rem;
+	}
+
+	.text-container h6,
+	.text-container2 h6 {
+		font-size: 3rem;
+	}
+	.text-container a,
+	.text-container2 a {
+		background-size: 115% 7px;
+	}
+
+	.img-container,
+	.img-container2 {
+		background-position: center;
+	}
+
+	.left-img-inside,
+	.right-img-inside {
+		width: 90%;
+		font-size: 1.4rem;
+		line-height: 3rem;
+	}
+
+	.left-img-inside h6,
+	.right-img-inside h6 {
+		font-size: 3rem;
+	}
+
+	.left-img-container,
+	.right-img-container {
+		background-position: center;
+	}
+	.navbar ul li {
+		display: none;
+	}
+	.contact {
+		display: none;
+	}
+	.hamburger {
+		display: block;
+		cursor: pointer;
+	}
+	.cards-div {
+		flex-direction: column;
+	}
+
+	.clients-container {
+		height: 1500px;
+		margin: auto 0px;
+		justify-content: start;
+		font-size: 1.2rem;
+	}
+
+	.client-welcome {
+		font-size: 1.2rem;
+		margin: 70px 0px 70px 0px;
+	}
+
+	.emily .profile,
+	.thomas .profile,
+	.jennie .profile {
+		height: 70px;
+		width: 70px;
+		min-height: 70px;
+		min-width: 70px;
+		margin-bottom: 30px;
+	}
+
+	.thomas .profile {
+		margin-top: 90px;
+	}
+	.jennie .profile {
+		margin-top: 150px;
+	}
+	.navbar ul {
+		width: 90%;
+	}
+
+	.emily p,
+	.thomas p,
+	.jennie p {
+		margin-bottom: 30px;
+	}
+	.images-container {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 50% 50%;
+		grid-template-areas:
+			"img1 img2"
+			"img3 img4";
+	}
+	.img1 {
+		grid-area: img1;
+		background-position: center;
+	}
+	.img2 {
+		grid-area: img2;
+		background-position: center;
+	}
+	.img3 {
+		grid-area: img3;
+		background-position: center;
+	}
+	.img4 {
+		grid-area: img4;
+		background-position: center;
+	}
+}
